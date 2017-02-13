@@ -22,14 +22,14 @@ var options = xsjs.extend({
 try {
     options = xsjs.extend(options, xsenv.getServices({ hana: {tag: "hana"} }));
 } catch (err) {
-    console.error(err);
+    //console.error(err);
 }
 
 // configure UAA
 try {
     options = xsjs.extend(options, xsenv.getServices({ uaa: {tag: "xsuaa"} }));
 } catch (err) {
-    console.error(err);
+    //console.error(err);
 }
 
 xsjstest(options).runTests();
